@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <title>Generator Capacity Validation</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="" method="get">
+                    <h1 class="text-center mb-5">Recommendation System</h1>
+                    <table class="table mb-5">
+                        <tr>
+                            <th>S/N</th>
+                            <th>Appliance</th>
+                            <th>Qty</th>
+                            <th>Unit Consumption (KW)</th>
+                            <th>Consumption by Appliance</th>
+                            <th>Remark</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Electric Iron</td>
+                            <td> 
+                                <input type="text" id="iron-qty" class="form-control" oninput="elect_product();">
+                            </td>
+                            <td>
+                                <input type="text" id="iron-unit" class="form-control" oninput="elect_product();">
+                            </td>
+                            <td id="elect-cons"></td>
+                            <td id="elect-remark"></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Television</td>
+                            <td> 
+                                <input type="text" id="tel-qty" class="form-control" oninput="tel_product();">
+                            </td>
+                            <td>
+                                <input type="text" id="tel-unit" class="form-control" oninput="tel_product();">
+                            </td>
+                            <td id="tel-cons"></td>
+                            <td id="tel-remark"></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Laptop</td>
+                            <td> 
+                                <input type="text" id="lap-qty" class="form-control" oninput="lap_product();">
+                            </td>
+                            <td>
+                                <input type="text" id="lap-unit" class="form-control" oninput="lap_product();">
+                            </td>
+                            <td id="lap-cons"></td>
+                            <td id="lap-remark"></td>
+                        </tr>
+
+                        
+                    </table>
+
+                    <button type="button" class="btn btn-danger mb-5" onclick="totalConsumption();">Get Recommendation</button>
+                    <p id="result"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
